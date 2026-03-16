@@ -47,7 +47,7 @@ while try_left > 0:
         try_left -= 1
         print('Нет такой буквы')
 
-# ---------------------------------------
+
 
     finish_word = assemble_word()
 
