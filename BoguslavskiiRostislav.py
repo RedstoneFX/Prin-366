@@ -1,7 +1,7 @@
 from math import copysign
 
 
-class LinearRegression:
+class LinearRegression:  # another commit to master #2
     def __init__(self, a=0, b=0):
         self.a = a
         self.b = b
