@@ -3,7 +3,7 @@ def analyze_text(text):
     text = text.lower()
     
     # Убираем знаки препинания
-    for symbol in ",.!?;:-()\"":
+    for symbol in ",.!?;:-\"":
         text = text.replace(symbol, "")
     
     words = text.split()
