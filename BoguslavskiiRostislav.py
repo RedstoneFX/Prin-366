@@ -13,8 +13,6 @@ class LinearRegression:
         return self.a * x + self.b
 
     def accumulateTraining(self, question, answer):
-        # f(x) = ax + b
-        # E = (v - f(q)) ^ 2
         predicted = self.predict(question)
         dEa = -2 * (answer - predicted) * question
         dEb = -2 * (answer - predicted)
