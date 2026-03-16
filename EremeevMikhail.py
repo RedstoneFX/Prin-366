@@ -1,7 +1,7 @@
 import math
 
 radius = 7
-area = math.pi * radius ** 2
+area = round(math.pi) * radius ** 2 # Первый коммит в свою ветку, округление числа Пи
 circumference = 2 * math.pi * radius
 
 print(f"Радиус круга: {radius}")
