@@ -30,8 +30,8 @@ func NewTodoList() *TodoList {
 }
 
 func main() {
-	todoList := NewTodoList()
-	reader := bufio.NewReader(os.Stdin)
+	todoList := NewTodoList()           // создаём экземпляр менеджера
+	reader := bufio.NewReader(os.Stdin) // создаём reader для чтения консоли
 
 	fmt.Println("📋 Менеджер задач")
 	fmt.Println("==================")
@@ -108,7 +108,7 @@ func addTask(reader *bufio.Reader, todoList *TodoList) {
 
 func markTaskDone(reader *bufio.Reader, todoList *TodoList) {
 	if len(todoList.tasks) == 0 {
-		fmt.Println("📭 Список задач пуст")
+		fmt.Println("📭 Список задач пуст!")
 		return
 	}
 
@@ -118,14 +118,14 @@ func markTaskDone(reader *bufio.Reader, todoList *TodoList) {
 
 	id, err := strconv.Atoi(idStr)
 	if err != nil {
-		fmt.Println("❌ Некорректный ID")
+		fmt.Println("❌ Некорректный ID!")
 		return
 	}
 
 	for i, task := range todoList.tasks {
 		if task.ID == id {
 			if task.Completed {
-				fmt.Println("⚠️ Задача уже выполнена")
+				fmt.Println("⚠️ Задача уже выполнена!")
 				return
 			}
 			todoList.tasks[i].Completed = true
@@ -133,12 +133,12 @@ func markTaskDone(reader *bufio.Reader, todoList *TodoList) {
 			return
 		}
 	}
-	fmt.Println("❌ Задача с таким ID не найдена")
+	fmt.Println("❌ Задача с таким ID не найдена!")
 }
 
 func deleteTask(reader *bufio.Reader, todoList *TodoList) {
 	if len(todoList.tasks) == 0 {
-		fmt.Println("📭 Список задач пуст")
+		fmt.Println("📭 Список задач пуст!")
 		return
 	}
 
@@ -148,7 +148,7 @@ func deleteTask(reader *bufio.Reader, todoList *TodoList) {
 
 	id, err := strconv.Atoi(idStr)
 	if err != nil {
-		fmt.Println("❌ Некорректный ID")
+		fmt.Println("❌ Некорректный ID!")
 		return
 	}
 
@@ -160,12 +160,12 @@ func deleteTask(reader *bufio.Reader, todoList *TodoList) {
 			return
 		}
 	}
-	fmt.Println("❌ Задача с таким ID не найдена")
+	fmt.Println("❌ Задача с таким ID не найдена!")
 }
 
 func clearCompleted(todoList *TodoList) {
 	if len(todoList.tasks) == 0 {
-		fmt.Println("📭 Список задач пуст")
+		fmt.Println("📭 Список задач пуст!")
 		return
 	}
 
@@ -178,7 +178,7 @@ func clearCompleted(todoList *TodoList) {
 	}
 
 	if completedCount == 0 {
-		fmt.Println("📭 Нет выполненных задач")
+		fmt.Println("📭 Нет выполненных задач!")
 		return
 	}
 
