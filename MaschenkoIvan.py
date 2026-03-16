@@ -6,7 +6,7 @@ def generate1(): # generate standart dots
     b = uniform(0, 1)
     return (a * cos(2 * pi * b), a * sin(2 * pi * b))
 
-def generate2():
+def generate2(): # another generator
     while True:
         x = uniform(-1, 1)
         y = uniform(-1, 1)
