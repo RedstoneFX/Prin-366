@@ -15,7 +15,7 @@ def analyze_text(text):
     for word in words:
         total_length += len(word)
         
-        if word in word_count:
+        if word in word_count: # если слово есть в словаре слов
             word_count[word] += 1
         else:
             word_count[word] = 1
