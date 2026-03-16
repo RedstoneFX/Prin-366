@@ -6,7 +6,7 @@ USD = 76.73
 EUR = 90.35
 CNY = 11.11
 JPY = 0.49
-
+# Бесконечный цикл
 while True:
     try:
         rubles = float(input("\nВведите сумму в рублях: "))
