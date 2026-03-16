@@ -9,6 +9,11 @@ public class Direction {
 		
         _hours = hours;
     }
+
+	// branch 1
+    public Direction anticlockwise() {
+        return new Direction(this._hours - 3);
+    }
 	
 	public static Direction north() {
         return new Direction(0);
