@@ -3,7 +3,7 @@ def analyze_text(text):
     text = text.lower()
     
     # Убираем знаки препинания
-    for symbol in ",.!?;:-()\"":
+    for symbol in ",.!?;:-\"":
         text = text.replace(symbol, "")
     
     words = text.split()
@@ -15,7 +15,7 @@ def analyze_text(text):
     for word in words:
         total_length += len(word)
         
-        if word in word_count:
+        if word in word_count: # если слово есть в словаре слов
             word_count[word] += 1
         else:
             word_count[word] = 1
