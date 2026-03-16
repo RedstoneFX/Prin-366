@@ -6,11 +6,11 @@ USD = 76.73
 EUR = 90.35
 CNY = 11.11
 JPY = 0.49
-
+# Бесконечный цикл
 while True:
     try:
         rubles = float(input("\nВведите сумму в рублях: "))
-
+        # вывод списка валют
         print("Список валют:\n" "1: USD\n" "2: EUR\n" "3: CNY\n" "4: JPY\n")
 
         currency = int(input("Введите необходимую вам валюту в цифрах: "))
@@ -24,7 +24,7 @@ while True:
         elif(currency == 4):
             print(f"{rubles} рублей = {rubles/JPY} йен")
         else:
-            print("Ошибка!!! Такой валюты нет!")
+            print("Ошибка!!! Такой валюты нет! Повторите!")
             
     except ValueError:
         print("Ошибка. Нужно вводить числа.")
