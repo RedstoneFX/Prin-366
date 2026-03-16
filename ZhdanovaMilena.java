@@ -18,6 +18,11 @@ public class Direction {
 	public static Direction north() {
         return new Direction(0);
     }
+
+	// master 2
+    public Direction opposite() {
+        return new Direction(this._hours + 6);
+    }
 	
     public static Direction south() {
         return new Direction(6);
