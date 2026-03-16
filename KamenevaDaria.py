@@ -48,7 +48,7 @@ def math_quiz():
             print("Неплохо, но можно лучше")
         else:
             print("Нужно подтянуть математику")
-
+# comment 2
 while True:
     print("\n1. Начать тренировку")
     print("0. Выйти")
