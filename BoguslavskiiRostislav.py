@@ -50,5 +50,5 @@ class LinearRegression:
         for question, answer in QnAPairs:
             self.accumulateTraining(question, answer)
 
-    def __str__(self):
+    def __str__(self):  # Some test commit
         return "{" + f"f(x) = {self.a}x + {self.b}" + "}"
