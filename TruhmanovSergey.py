@@ -4,6 +4,8 @@
 tasks = []  # Список для хранения задач
 # Комментарий
 def show_tasks():
+
+def show_tasks(): # Показать таски
     """Показывает все задачи."""
     if not tasks:
         print("Список задач пуст.")
@@ -35,7 +37,7 @@ while True:
     print("2. Добавить задачу")
     print("3. Удалить задачу")
     print("4. Выход")
-    
+    # comment
     choice = input("Выберите действие: ")
     
     if choice == '1':

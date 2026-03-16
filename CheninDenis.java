@@ -58,7 +58,7 @@ public class ColoredPip {
         return symbol;
     }
 
-    public void setSymbol(String symbol) {
+    protected void setSymbol(String symbol) {
         this.symbol = symbol;
     }
 
@@ -74,7 +74,7 @@ public class ColoredPip {
         return index;
     }
 
-    public void setIndex(int index) {
+    protected void setIndex(int index) {
         this.index = index;
     }
 
@@ -82,7 +82,7 @@ public class ColoredPip {
         return secondIndex;
     }
 
-    public void setSecondIndex(int secondIndex) {
+    protected void setSecondIndex(int secondIndex) {
         this.secondIndex = secondIndex;
     }
 
@@ -221,6 +221,8 @@ public class Cost {
         }
     }
 
+    // необходимо доработать алгоритм 
+
     // Получаем преобразованную мана-стоимость
     public int getConvertedManaCost() {
         return getGeneric() + getWhite() + getBlue() + getBlack() + getRed() + getGreen() + getColorless();
@@ -278,6 +280,8 @@ public class Cost {
 void main() {
     Cost cost;
     cost = new Cost("1"); // 1
+    IO.println(String.format(cost.getFullManaCost()));
+    cost = new Cost("01"); // 1
     IO.println(String.format(cost.getFullManaCost()));
     cost = new Cost("10"); // 10
     IO.println(String.format(cost.getFullManaCost()));
