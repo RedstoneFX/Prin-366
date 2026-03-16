@@ -2,7 +2,7 @@
 # Основа для будущих доработок
 
 tasks = []  # Список для хранения задач
-
+# Комментарий
 def show_tasks():
     """Показывает все задачи."""
     if not tasks:
@@ -27,7 +27,7 @@ def delete_task():
         print(f"Задача '{removed}' удалена.")
     except (IndexError, ValueError):
         print("Ошибка: неверный номер.")
-
+# comment
 # Основной цикл программы
 while True:
     print("\n--- Меню ---")
