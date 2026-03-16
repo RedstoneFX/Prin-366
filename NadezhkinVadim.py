@@ -61,9 +61,9 @@ def get_schedule(week, day):
                 print(f"{lesson['room']}")
             print("-" * 40)
 
-
+# пусть тут пока правда будем, 80 равно 
 while True:
-    print("\n" + "=" * 60)
+    print("\n" + "=" * 80)
     print("Введите номер недели (1 или 2) и номер дня (1-7)")
     print("Или '0' для выхода")
 
