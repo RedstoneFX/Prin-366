@@ -37,7 +37,7 @@ class LinearRegression:
         self.total_b_change = 0
         self.lessons_trained = 0
 
-    def applyTrainingBySign(self, step):
+    def applyTrainingBySign(self, step): # first commit to personal branch
         self.total_a_change /= self.lessons_trained
         self.total_b_change /= self.lessons_trained
         self.a += copysign(step, self.total_a_change)
