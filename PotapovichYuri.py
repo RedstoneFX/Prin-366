@@ -20,7 +20,7 @@ def main():
             password = generate_password(length)
             print(f"Сгенерированный пароль: {password}\n")
         except ValueError:
-            print("Ошибка: введите целое число.\n")
+            print("Ошибка: введите целое число\n")
 
 if __name__ == "__main__":
     main()
