@@ -11,7 +11,7 @@ def main():
     print("Генератор паролей")
     while True:
         try:
-            length = int(input("Введите длину пароля (или 0 для выхода): "))
+            length = int(input("Введите длину пароля (или 0 для выхода!): "))
             if length == 0:
                 print("Выход из программы.")
                 break
