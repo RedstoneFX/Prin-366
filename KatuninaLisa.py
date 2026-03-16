@@ -32,5 +32,5 @@ def analyze_text(text):
         print(f"{word}: {word_count[word]}")
 
 
-text_input = input("Введите текст для анализа: ")
+text_input = input("Введите текст для полного анализа: ")
 analyze_text(text_input)
