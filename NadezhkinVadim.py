@@ -50,7 +50,7 @@ def get_schedule(week, day):
     print("=" * 60)
 
     if not day_schedule:
-        print("Отдыхаем")
+        print("КАЙФУЕМ СЕГОДНЯ")
     else:
         for lesson in day_schedule:
             print(f"\n {lesson['time']} пара")
