@@ -58,7 +58,7 @@ public class ColoredPip {
         return symbol;
     }
 
-    public void setSymbol(String symbol) {
+    protected void setSymbol(String symbol) {
         this.symbol = symbol;
     }
 
@@ -74,7 +74,7 @@ public class ColoredPip {
         return index;
     }
 
-    public void setIndex(int index) {
+    protected void setIndex(int index) {
         this.index = index;
     }
 
@@ -82,7 +82,7 @@ public class ColoredPip {
         return secondIndex;
     }
 
-    public void setSecondIndex(int secondIndex) {
+    protected void setSecondIndex(int secondIndex) {
         this.secondIndex = secondIndex;
     }
 
@@ -115,7 +115,7 @@ public class Cost {
         return white.getNumber();
     }
 
-    public void setWhite(int i) {
+    private void setWhite(int i) {
         this.white.setNumber(i);
     }
 
@@ -123,7 +123,7 @@ public class Cost {
         return blue.getNumber();
     }
 
-    public void setBlue(int i) {
+    private void setBlue(int i) {
         this.blue.setNumber(i);
     }
 
@@ -131,7 +131,7 @@ public class Cost {
         return black.getNumber();
     }
 
-    public void setBlack(int i) {
+    private void setBlack(int i) {
         this.black.setNumber(i);
     }
 
@@ -139,7 +139,7 @@ public class Cost {
         return red.getNumber();
     }
 
-    public void setRed(int i) {
+    private void setRed(int i) {
         this.red.setNumber(i);
     }
 
@@ -147,7 +147,7 @@ public class Cost {
         return green.getNumber();
     }
 
-    public void setGreen(int i) {
+    private void setGreen(int i) {
         this.green.setNumber(i);
     }
 
@@ -155,7 +155,7 @@ public class Cost {
         return colorless;
     }
 
-    public void setColorless(int i) {
+    private void setColorless(int i) {
         this.colorless = i;
     }
 
@@ -221,6 +221,8 @@ public class Cost {
         }
     }
 
+    // необходимо доработать алгоритм 
+
     // Получаем преобразованную мана-стоимость
     public int getConvertedManaCost() {
         return getGeneric() + getWhite() + getBlue() + getBlack() + getRed() + getGreen() + getColorless();
@@ -279,6 +281,8 @@ void main() {
     Cost cost;
     cost = new Cost("1"); // 1
     IO.println(String.format(cost.getFullManaCost()));
+    cost = new Cost("01"); // 1
+    IO.println(String.format(cost.getFullManaCost()));
     cost = new Cost("10"); // 10
     IO.println(String.format(cost.getFullManaCost()));
     cost = new Cost("1W"); // 1W
@@ -294,6 +298,8 @@ void main() {
     cost = new Cost("urw"); // WUR
     IO.println(String.format(cost.getFullManaCost()));
     cost = new Cost("grUBw"); // WUBRG
+    IO.println(String.format(cost.getFullManaCost()));
+    cost = new Cost("bubr"); // UBBR
     IO.println(String.format(cost.getFullManaCost()));
     try{
         cost = new Cost("ipwyi"); // ошибка

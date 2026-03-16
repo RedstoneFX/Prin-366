@@ -21,10 +21,10 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="TinyURL API", version="1.0.0", lifespan=lifespan)
+app = FastAPI(title="TinyURL API", version="2.0.0", lifespan=lifespan, response=HTTPS.status_404_NOT_FOUND)
 
 
-app.include_router(router, prefix="/api/v1")
+app.include_router(router, prefix="/api/v2", tags=["VCS"])
 
 
 @app.get("/")
@@ -36,6 +36,6 @@ async def read_root():
 async def health_check():
     return {
         "status": "healthy",
-        "timestamp": datetime.now(),
-        "service": "tinyurl-api"
+        "timestamp": datetime.now().isoformat(),
+        "service": "tinyurl-api-v2"
     }

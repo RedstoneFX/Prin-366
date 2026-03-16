@@ -13,8 +13,6 @@ class LinearRegression:  # another commit to master #2
         return self.a * x + self.b
 
     def accumulateTraining(self, question, answer):
-        # f(x) = ax + b
-        # E = (v - f(q)) ^ 2
         predicted = self.predict(question)
         dEa = -2 * (answer - predicted) * question
         dEb = -2 * (answer - predicted)
@@ -37,7 +35,7 @@ class LinearRegression:  # another commit to master #2
         self.total_b_change = 0
         self.lessons_trained = 0
 
-    def applyTrainingBySign(self, step):
+    def applyTrainingBySign(self, step): # first commit to personal branch
         self.total_a_change /= self.lessons_trained
         self.total_b_change /= self.lessons_trained
         self.a += copysign(step, self.total_a_change)
