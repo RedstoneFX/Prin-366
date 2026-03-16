@@ -36,6 +36,6 @@ async def read_root():
 async def health_check():
     return {
         "status": "healthy",
-        "timestamp": datetime.now(),
-        "service": "tinyurl-api"
+        "timestamp": datetime.now().isoformat(),
+        "service": "tinyurl-api-v2"
     }
