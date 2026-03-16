@@ -16,7 +16,7 @@ def main():
                 print("Выход из программы.")
                 break
             if length < 4:
-                print("Рекомендуется длина не менее 4 символов.")
+                print("Рекомендуется длина не менее 6 символов.")
             password = generate_password(length)
             print(f"Сгенерированный пароль: {password}\n")
         except ValueError:
