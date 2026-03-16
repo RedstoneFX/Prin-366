@@ -10,7 +10,7 @@ finish_word = ''      # текущее отображаемое состояни
 print('Это Виселица')
 print(f'Угадай слово (длина: {len(word)}) - у тебя {try_left} попыток\n')
 
-
+# создание слова 
 def assemble_word(): # создать текущую отображаемую версию загаданного слова
     finish_word = ''
     for later in word:
@@ -23,7 +23,7 @@ def assemble_word(): # создать текущую отображаемую в
 
 while try_left > 0:
 
-    finish_word = assemble_word() # собираем finish_word
+    finish_word = assemble_word() 
     print('Слово:', ' '.join(finish_word))
 
     if guesses:
@@ -32,7 +32,7 @@ while try_left > 0:
     print(f'Попыток осталось: {try_left}')
     later = input('Буква: ').lower()
 
-# -------------- проверки --------------
+
     if len(later) != 1 or not later.isalpha():
         print('Нужна одна буква')
         continue
@@ -47,7 +47,7 @@ while try_left > 0:
         try_left -= 1
         print('Нет такой буквы')
 
-# ---------------------------------------
+
 
     finish_word = assemble_word()
 

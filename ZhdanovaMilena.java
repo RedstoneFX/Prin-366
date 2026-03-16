@@ -1,6 +1,11 @@
 public class Direction {
 
     private final int _hours;
+	
+	// master 1
+	public Direction clockwise() {
+        return new Direction(this._hours + 3);
+    }
 
     private Direction(int hours) {
 		
@@ -17,6 +22,11 @@ public class Direction {
 	
 	public static Direction north() {
         return new Direction(0);
+    }
+
+	// master 2
+    public Direction opposite() {
+        return new Direction(this._hours + 6);
     }
 	
     public static Direction south() {

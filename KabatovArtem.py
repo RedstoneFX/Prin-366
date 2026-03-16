@@ -10,7 +10,7 @@ from datetime import datetime
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     configure_logging()
-
+    # Setting up database
     engine = get_engine()
     try:
         Base.metadata.create_all(bind=engine)
@@ -29,7 +29,7 @@ app.include_router(router, prefix="/api/v2", tags=["VCS"])
 
 @app.get("/")
 async def read_root():
-    return {"message": "Welcome to the TinyURL API"}
+    return {"message": "Welcome to the TinyURL API version №2"}
 
 
 @app.get("/health")
